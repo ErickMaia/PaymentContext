@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 namespace PaymentContext.Domain.Entities
 {
     public class Subscription
