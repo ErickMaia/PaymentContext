@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
 
@@ -9,7 +10,9 @@ namespace PaymentContext.Tests
         [TestMethod]
         public void TestMethod1()
         {
-            var student = new Student(); 
+            Subscription sub = new Subscription(DateTime.Now.AddYears(1)); 
+            var student = new Student("Erick", "Maia", "1234567890", "hello@balta.io"); 
+            student.AddSubscription(sub); 
 
         }
     }
