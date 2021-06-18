@@ -9,6 +9,13 @@ namespace PaymentContext.Domain.ValueObjects
         {
             FirstName = firstName;
             LastName = lastName;
+
+            if(string.IsNullOrEmpty(FirstName))
+                AddNotification("FirstName", "String is null or empty. "); 
+            
+            if(string.IsNullOrEmpty(LastName))
+                AddNotification("LastName", "String is null or empty. ");           
+
         }
 
         public string FirstName { get; private set; }
